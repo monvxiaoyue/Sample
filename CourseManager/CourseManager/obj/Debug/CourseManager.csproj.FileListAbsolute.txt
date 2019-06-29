@@ -63,8 +63,6 @@ D:\HL\CourseManager\CourseManager\obj\Debug\CourseManager.pdb
 D:\HL\CourseManager\CourseManager\obj\Debug\CourseManager.Migrations.create.resources
 D:\HL\CourseManager\CourseManager\obj\Debug\CourseManager.csproj.GenerateResource.Cache
 D:\HL\CourseManager\CourseManager\obj\Debug\CourseManager.csprojResolveAssemblyReference.cache
-D:\HL\Sample\CourseManager\CourseManager\obj\Debug\CourseManager.Migrations.create.resources
-D:\HL\Sample\CourseManager\CourseManager\obj\Debug\CourseManager.csproj.GenerateResource.Cache
 D:\HL\Sample\CourseManager\CourseManager\obj\Debug\CourseManager.dll
 D:\HL\Sample\CourseManager\CourseManager\obj\Debug\CourseManager.pdb
 D:\HL\Sample\CourseManager\CourseManager\bin\CourseManager.dll
@@ -128,3 +126,5 @@ D:\HL\Sample\CourseManager\CourseManager\bin\zh-Hans\WebMatrix.Data.resources.dl
 D:\HL\Sample\CourseManager\CourseManager\bin\zh-Hans\Microsoft.Web.WebPages.OAuth.resources.dll
 D:\HL\Sample\CourseManager\CourseManager\bin\zh-Hans\WebMatrix.WebData.resources.dll
 D:\HL\Sample\CourseManager\CourseManager\obj\Debug\CourseManager.csprojResolveAssemblyReference.cache
+D:\HL\Sample\CourseManager\CourseManager\obj\Debug\CourseManager.Migrations._1227.resources
+D:\HL\Sample\CourseManager\CourseManager\obj\Debug\CourseManager.csproj.GenerateResource.Cache

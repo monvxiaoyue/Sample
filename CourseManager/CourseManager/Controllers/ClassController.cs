@@ -92,6 +92,14 @@ namespace CourseManager.Controllers
             return View(classes);
         }
 
+        public ActionResult ShowCourseManagement (int id)
+        {
+            return View();
+        }
+
+
+
+
         //
         // GET: /Class/Delete/5
 

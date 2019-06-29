@@ -163,6 +163,8 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="BLLs\Classes\CourseManageDetail.cs" />
+    <Compile Include="BLLs\Classes\IClassRepository.cs" />
     <Compile Include="Controllers\ActionLinksController.cs" />
     <Compile Include="Controllers\ClassController.cs" />
     <Compile Include="Controllers\CourseController.cs" />
@@ -174,11 +176,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201912040050167_create.cs" />
-    <Compile Include="Migrations\201912040050167_create.Designer.cs">
-      <DependentUpon>201912040050167_create.cs</DependentUpon>
+    <Compile Include="Migrations\201906290627066_1227.cs" />
+    <Compile Include="Migrations\201906290627066_1227.Designer.cs">
+      <DependentUpon>201906290627066_1227.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Migrations\Seeds\ActionLinkCreator.cs" />
+    <Compile Include="Migrations\Seeds\SideBarsCreator.cs" />
     <Compile Include="Models\ActionLinks.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -393,6 +397,7 @@
     <Content Include="Views\ActionLinks\Edit.cshtml" />
     <Content Include="Views\ActionLinks\Delete.cshtml" />
     <Content Include="Views\Shared\SideBar.cshtml" />
+    <Content Include="Views\Class\ShowCourseManagement.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -404,8 +409,8 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201912040050167_create.resx">
-      <DependentUpon>201912040050167_create.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201906290627066_1227.resx">
+      <DependentUpon>201906290627066_1227.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

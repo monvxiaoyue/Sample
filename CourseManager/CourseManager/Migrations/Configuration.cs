@@ -1,5 +1,6 @@
 namespace CourseManager.Migrations
 {
+    using CourseManager.Migrations.Seeds;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
@@ -25,7 +26,8 @@ namespace CourseManager.Migrations
             //      new Person { FullName = "Brice Lambson" },
             //      new Person { FullName = "Rowan Miller" }
             //    );
-            //
+            new ActionLinkCreator(context).Seed();
+            new SideBarsCreator(context).Seed();
         }
     }
 }

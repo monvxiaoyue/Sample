@@ -3,7 +3,7 @@ namespace CourseManager.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class create : DbMigration
+    public partial class _1227 : DbMigration
     {
         public override void Up()
         {
@@ -12,7 +12,7 @@ namespace CourseManager.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        Name = c.String(maxLength: 20),
+                        Name = c.String(),
                         TeacherId = c.Int(),
                     })
                 .PrimaryKey(t => t.Id);
@@ -53,7 +53,29 @@ namespace CourseManager.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        Name = c.String(maxLength: 20),
+                        Name = c.String(),
+                    })
+                .PrimaryKey(t => t.Id);
+            
+            CreateTable(
+                "dbo.ActionLinks",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Name = c.String(),
+                        Controller = c.String(),
+                        Action = c.String(),
+                    })
+                .PrimaryKey(t => t.Id);
+            
+            CreateTable(
+                "dbo.SideBars",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Name = c.String(),
+                        Controller = c.String(),
+                        Action = c.String(),
                     })
                 .PrimaryKey(t => t.Id);
             
@@ -61,6 +83,8 @@ namespace CourseManager.Migrations
         
         public override void Down()
         {
+            DropTable("dbo.SideBars");
+            DropTable("dbo.ActionLinks");
             DropTable("dbo.Courses");
             DropTable("dbo.CourseManagements");
             DropTable("dbo.Students");
