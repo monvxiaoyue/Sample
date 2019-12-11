@@ -1,0 +1,26 @@
+﻿
+<header>
+            <div class="content-wrapper">
+                <div class="float-left">
+                    <p class="site-title">@Html.ActionLink("将你的徽标放置在此处", "Index", "Home")</p>
+                </div>
+                <div class="float-right">
+                    <section id="login">
+                        @Html.Partial("_LoginPartial")
+                    </section>
+                    <nav>
+                        <ul id="menu">
+                            <li>@Html.ActionLink("主页", "Index", "Home")</li>
+                            <li>@Html.ActionLink("关于", "About", "Home")</li>
+                            <li>@Html.ActionLink("联系方式", "Contact", "Home")</li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <div id="body">
+            @RenderSection("featured", required: false)
+            <section class="content-wrapper main-content clear-fix">
+                @RenderBody()
+            </section>
+        </div>

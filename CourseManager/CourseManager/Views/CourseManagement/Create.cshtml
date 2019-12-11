@@ -1,0 +1,65 @@
+﻿@model CourseManager.Models.CourseManagements
+@using CourseManager.Models
+@{
+    ViewBag.Title = "Create";
+    var classes = (List<Classes>)ViewBag.Classes;
+    var teachers = (List<Teachers>)ViewBag.teachers;
+    var courses = (List<Course>)ViewBag.course;
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>CourseManagements</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ClassId)
+        </div>
+        <div class="editor-field">
+            <select name="ClassId" class="form-control">
+                @foreach (var cls in classes)
+                {
+                  <option value="@cls.Id">@cls.Name</option>
+                }
+
+            </select>
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Courseid)
+        </div>
+        <div class="editor-field">
+            <select name="Coursesid" class="form-control">
+                @foreach (var Course in courses)
+                {
+                  <option value="@Course.Id">@Course.Name</option>
+                }
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Teacherid)
+        </div>
+        <div class="editor-field">
+             <select name="Teacherid" class="form-control">
+                @foreach (var teacher in teachers)
+                {
+                  <option value="@teacher.Id">@teacher.Name</option>
+                }
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,49 @@
+﻿@model CourseManager.Models.Students
+@using CourseManager.Models
+
+@{
+    ViewBag.Title = "Create";
+    var classes = (List<Classes>)ViewBag.Classes;
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Students</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Name)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Name)
+            @Html.ValidationMessageFor(model => model.Name)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ClassId)
+        </div>
+        <div class="editor-field">
+             <select name="Classid" class="form-control">
+                @foreach (var Class in classes) { 
+                 <option value="@Class.Id">@Class.Name</option>
+                }
+                </select>
+           
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

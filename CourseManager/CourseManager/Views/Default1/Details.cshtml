@@ -1,0 +1,36 @@
+﻿@model CourseManager.Models.CourseManagements
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>CourseManagements</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ClassId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ClassId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Courseid)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Courseid)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Teacherid)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Teacherid)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
