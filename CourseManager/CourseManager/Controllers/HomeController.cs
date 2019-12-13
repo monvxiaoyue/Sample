@@ -13,7 +13,8 @@ namespace CourseManager.Controllers
         {
             ViewBag.Message = "修改此模板以快速启动你的 ASP.NET MVC 应用程序。";
 
-            return View();
+            var site = new WebsiteInfo("1212", "54565");
+            return View(site);
 
         }
 
@@ -27,9 +28,9 @@ namespace CourseManager.Controllers
 
         public ActionResult Nabar()
         {
-            var site = new WebsiteInfo();
-            ViewBag.Message = site;
-            return PartialView("/view/Shar/Navbar.cshtml");
+            var site = new WebsiteInfo("课程管理体系","主页");
+            ViewBag.Site = site;
+            return PartialView("/view/Shar/Navbar.cshtml", site);
         }
     }
 }
