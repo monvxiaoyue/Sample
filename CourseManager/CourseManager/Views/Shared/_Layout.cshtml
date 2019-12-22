@@ -10,11 +10,17 @@
         @Scripts.Render("~/bundles/modernizr")
     </head>
     <body>
-        @Html .Action("Navbar","Home")
+        @Html.Action("Navbar","Home")
         <footer>
             <div class="content-wrapper">
-                <div class="col-md-3"></div>
-                 <div class="col-md-3">
+                <div class="col-md-3">
+                    <ul class ="nav navabar-nav">
+                        <li> @Html.ActionLink("link.Name","link.Action","link.Controller",new { area = "" },new { @class="navabar-brand"})</li>
+                        <li> @Html.ActionLink("link.Name","link.Action","link.Controller", new { area = "" },new { @class="navabar-brand"})</li>
+                    </ul>
+
+                </div>
+                 <div class="col-md-9">
                 @RenderBody()
                  </div>
                 <hr/>

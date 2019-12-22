@@ -25,12 +25,11 @@ namespace CourseManager.Controllers
             return View();
         }
         [ChildActionOnly]
-
-        public ActionResult Nabar()
+        public ActionResult Navbar()
         {
             var site = new WebsiteInfo("课程管理体系","主页");
             ViewBag.Site = site;
-            return PartialView("/view/Shar/Navbar.cshtml", site);
+            return PartialView("~/Views/Shared/Navbar.cshtml", site);
         }
     }
 }

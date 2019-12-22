@@ -12,9 +12,11 @@ namespace CourseManager.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Course
+    public partial class SideBars
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        public string Controller { get; set; }
+        public string Action { get; set; }
     }
 }

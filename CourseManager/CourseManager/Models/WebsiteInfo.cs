@@ -5,13 +5,6 @@ using System.Web;
 
 namespace CourseManager.Models
 {
-    public class ActionLinks
-    {
-        public string Name { get; set; }
-        public string Controller { get; set; }
-        public string Action{ get; set; }
-    
-    }
     public class WebsiteInfo
     {
       

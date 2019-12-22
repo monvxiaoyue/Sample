@@ -1,6 +1,6 @@
 ﻿@using CourseManager.Models;
 @{
-    var site=(WebsiteInfo) ViewBag.SiteName;
+    var site=(WebsiteInfo) ViewBag.Site;
     }
             <div class="navabar navabar-inverse navaber-fixed-top">
                 <div class="container">
@@ -10,13 +10,13 @@
                              <span class="icon-bar"></span>
                              <span class="icon-bar"></span>
                         </button>
-                        @Html.ActionLink(WebsiteInfo.SiteName, "Index", "Home", new { area = "" }, new { @class="navabar-brand"})
+                        @Html.ActionLink(site.SiteName, "Index", "Home", new { area = "" }, new { @class="navabar-brand"})
                 </div>
                 <div class="navaber-collapse collapse">
                     <ul class="nav navbar-nav">
-                            @foreach(var link in site.ActionLink)
+                            @foreach (var link in site.ActionLinks)
                             {
-                            <li> @Html.ActionLink(link.name,link.Action.link.Contorller )</li>
+                            <li> @Html.ActionLink(link.Name,link.Action,link.Controller )</li>
                             }
                         </ul>
                 </div>

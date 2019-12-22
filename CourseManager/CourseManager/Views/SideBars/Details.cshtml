@@ -1,0 +1,36 @@
+﻿@model CourseManager.Models.SideBars
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>SideBars</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Controller)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Controller)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Action)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Action)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

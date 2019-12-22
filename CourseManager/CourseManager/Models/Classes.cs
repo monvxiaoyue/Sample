@@ -11,16 +11,11 @@ namespace CourseManager.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
     
     public partial class Classes
     {
-        [Key]
-        [Required]
         public int Id { get; set; }
-        [StringLength(20)]
         public string Name { get; set; }
-        [StringLength(20)]
         public Nullable<int> TeacherId { get; set; }
     }
 }

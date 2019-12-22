@@ -163,10 +163,12 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\ActionLinksController.cs" />
     <Compile Include="Controllers\ClassController.cs" />
     <Compile Include="Controllers\CourseController.cs" />
     <Compile Include="Controllers\CourseManagementController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\SideBarsController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Controllers\TeacherController.cs" />
     <Compile Include="Global.asax.cs">
@@ -177,6 +179,17 @@
       <DependentUpon>201912040050167_create.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\ActionLinks.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\ActionLinks.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Models\ActionLinks1.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
     <Compile Include="Models\Classes.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -199,6 +212,9 @@
     <Compile Include="Models\CourseManager.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Models\SideBars.cs">
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\Students.cs">
       <SubType>Code</SubType>
@@ -370,6 +386,16 @@
     <Content Include="Views\CourseManagement\Delete.cshtml" />
     <Content Include="Views\Shared\Navbar.cshtml" />
     <Content Include="Views\Home\View1.cshtml" />
+    <Content Include="Views\SideBars\Index.cshtml" />
+    <Content Include="Views\SideBars\Details.cshtml" />
+    <Content Include="Views\SideBars\Create.cshtml" />
+    <Content Include="Views\SideBars\Edit.cshtml" />
+    <Content Include="Views\SideBars\Delete.cshtml" />
+    <Content Include="Views\ActionLinks\Index.cshtml" />
+    <Content Include="Views\ActionLinks\Details.cshtml" />
+    <Content Include="Views\ActionLinks\Create.cshtml" />
+    <Content Include="Views\ActionLinks\Edit.cshtml" />
+    <Content Include="Views\ActionLinks\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
