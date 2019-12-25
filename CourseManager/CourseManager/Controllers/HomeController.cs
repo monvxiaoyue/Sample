@@ -9,12 +9,13 @@ namespace CourseManager.Controllers
 {
     public class HomeController : Controller
     {
+        private CourseManageEntities db = new CourseManageEntities();
+
         public ActionResult Index()
         {
-            ViewBag.Message = "修改此模板以快速启动你的 ASP.NET MVC 应用程序。";
-
-            var site = new WebsiteInfo("1212", "54565");
-            return View(site);
+            var sidebars= db.SideBars.ToList();
+            ViewBag.SideBars = sidebars;
+            return View(new WebsiteInfo("班级管理","主页"));
 
         }
 
@@ -24,12 +25,27 @@ namespace CourseManager.Controllers
 
             return View();
         }
+        public ActionResult Contact()
+        {
+            ViewBag.Message = "you contact page";
+            return View();
+        }
         [ChildActionOnly]
         public ActionResult Navbar()
         {
             var site = new WebsiteInfo("课程管理体系","主页");
             ViewBag.Site = site;
-            return PartialView("~/Views/Shared/Navbar.cshtml", site);
+            return PartialView("~/Views/Shared/Navbar.cshtml");
         }
+
+        [ChildActionOnly]
+        public ActionResult SideBar()
+        {
+            var sidebars = db.SideBars.ToList();
+            ViewBag.SideBars = sidebars;
+            return PartialView("~/Views/Shared/SideBar.cshtml");
+        }
+
+
     }
 }

@@ -186,10 +186,6 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
     </Compile>
-    <Compile Include="Models\ActionLinks1.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-    </Compile>
     <Compile Include="Models\Classes.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -396,6 +392,7 @@
     <Content Include="Views\ActionLinks\Create.cshtml" />
     <Content Include="Views\ActionLinks\Edit.cshtml" />
     <Content Include="Views\ActionLinks\Delete.cshtml" />
+    <Content Include="Views\Shared\SideBar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

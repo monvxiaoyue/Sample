@@ -9,6 +9,7 @@ namespace CourseManager.Models
     {
       
       public const string String = "课程管理系统";
+      private string p;
       public List<ActionLinks> ActionLinks { get; set; }
 
       public string SiteName { get; set; }
@@ -25,6 +26,12 @@ namespace CourseManager.Models
              new ActionLinks{Name="联系方式", Controller="Home",Action= "Contact"}
       
         };
+      }
+
+      public WebsiteInfo(string p)
+      {
+          // TODO: Complete member initialization
+          this.p = p;
       }
 
       public static string siteName { get; set; }

@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 <html lang="zh">
     <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -8,16 +9,24 @@
         <meta name="viewport" content="width=device-width" />
         @Styles.Render("~/Content/css")
         @Scripts.Render("~/bundles/modernizr")
+        <style>
+            .sidebar {
+                padding-top:30px;
+                display :flexbox;
+                flex-direction:column;
+            }
+                .sidebar li a {
+                color :#333;
+                
+                }
+            </style>
     </head>
     <body>
         @Html.Action("Navbar","Home")
         <footer>
             <div class="content-wrapper">
                 <div class="col-md-3">
-                    <ul class ="nav navabar-nav">
-                        <li> @Html.ActionLink("link.Name","link.Action","link.Controller",new { area = "" },new { @class="navabar-brand"})</li>
-                        <li> @Html.ActionLink("link.Name","link.Action","link.Controller", new { area = "" },new { @class="navabar-brand"})</li>
-                    </ul>
+                  @Html.Action("SideBar","Home")
 
                 </div>
                  <div class="col-md-9">
